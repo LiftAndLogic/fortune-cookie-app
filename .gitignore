@@ -4,10 +4,23 @@
 *.log
 *.pyc
 *.swp
+.DS_Store
+.atom/
+.svn/
+.swiftpm/
+migrate_working_dir/
+
 .buildlog/
 .history
 
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
 
+# VS Code (optional)
+#.vscode/
 
 # Flutter repo-specific
 /bin/cache/
@@ -39,6 +52,7 @@ analysis_benchmark.json
 **/generated_plugin_registrant.dart
 .packages
 .pub-preload-cache/
+.pub-cache/
 .pub/
 build/
 flutter_*.png
@@ -50,12 +64,16 @@ unlinked_spec.ds
 **/android/**/gradle-wrapper.jar
 .gradle/
 **/android/captures/
+**/android/captures/
 **/android/gradlew
 **/android/gradlew.bat
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
 **/android/key.properties
 *.jks
+/android/app/debug
+/android/app/profile
+/android/app/release
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
@@ -89,7 +107,7 @@ unlinked_spec.ds
 
 # macOS
 **/Flutter/ephemeral/
-**/Pods/
+/Pods/
 **/macos/Flutter/GeneratedPluginRegistrant.swift
 **/macos/Flutter/ephemeral
 **/xcuserdata/
@@ -107,10 +125,11 @@ unlinked_spec.ds
 # Coverage
 coverage/
 
-# Symbols
+# Symbols and Obfuscation
 app.*.symbols
+app.*.map.json
 
-# Exceptions to above rules.
+# Exceptions to above rules
 !**/ios/**/default.mode1v3
 !**/ios/**/default.mode2v3
 !**/ios/**/default.pbxuser
